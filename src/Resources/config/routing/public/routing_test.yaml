@@ -1,0 +1,6 @@
+###############################################################################################################
+# Importante en los archivos con extensión .yaml cada sangrado equivale a 4 espacios!!!
+example_routing_distributed_level_3:
+    path:     /test-advanced-route-2
+    controller: App\Controller\TestRoutingController::testAdvancedRouteLevel2
+###############################################################################################################

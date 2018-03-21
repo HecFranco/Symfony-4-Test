@@ -1,0 +1,48 @@
+# the "app_frist_index" route name is not important yet
+# QUICK START ################################################################################
+frist_page:
+    # ruta por defecto
+    path: /
+    controller: App\Controller\TestFristController::fristPage
+frist_page_print_variable:
+    # ruta definida
+    path: /test-frist-page
+    controller: App\Controller\TestFristController::fristPageNumber
+frist_page_print_with_Twig:
+    # ruta definida
+    path: /test-frist-with-Twig
+    controller: App\Controller\TestFristController::fristPageNumberUsingTwig
+# EXAMPLES ROUTING ###########################################################################    
+example_routing_with_variable:
+    path: /example-with-variable/{slug}
+    controller: App\Controller\TestRoutingController::showRoutingWithVariable
+example_routing_with_variable_required_optional:
+    path: /example-with-variable-Required-Optional/{page}
+    controller:  App\Controller\TestRoutingController::showRoutingWithVariableRequiredOptional
+    defaults:
+        page: 1 
+example_routing_advanced:
+    path: /example-routing-advanced/{_language}/{date}/{section}/{page}/{team}.{_format}
+    controller: App\Controller\TestRoutingController::showRoutingAdvanced
+    defaults:
+        _format: html
+    requirements:
+        _idioma: en|fr
+        _format: html|rss
+        fecha: ([\d+]){8}
+        pagina: \d+ 
+# Importante en los archivos con extensión .yaml cada sangrado equivale a 4 espacios!!!
+example_routing_distributed:
+    # loads routes from the given routing file stored in some bundle
+    resource: '..\src\Resources\config\routing.yaml' 
+    type: yaml                    
+# EXAMPLES CONTROLLER ########################################################################    
+# Importante en los archivos con extensión .yaml cada sangrado equivale a 4 espacios!!!
+example_controller_with_variable:
+    path: /example-controller-with-variable/{slug}
+    controller: App\Controller\TestControllerController::showControllerWithVariable
+example_controller_with_variable_default:
+    path: example-controller-with-variable-default/{fristName}/{lastName}
+    controller: App\Controller\TestControllerController::showControllerWithVariableDefault
+    defaults:
+        color: green     

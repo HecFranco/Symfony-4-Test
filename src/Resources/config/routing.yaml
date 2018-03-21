@@ -1,0 +1,12 @@
+###############################################################################################################
+# Importante en los archivos con extensión .yaml cada sangrado equivale a 4 espacios!!!
+example_routing_distributed_level_1:
+    path:     /test-advanced-route-1
+    controller: App\Controller\TestRoutingController::testAdvancedRouteLevel1
+###############################################################################################################
+# Importante en los archivos con extensión .yaml cada sangrado equivale a 4 espacios!!!
+example_routing_distributed_level_2:
+    # loads routes from the given routing file stored in some bundle
+    resource: 'routing\public\' 
+    type: directory
+###############################################################################################################    
