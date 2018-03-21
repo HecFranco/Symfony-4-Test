@@ -9,4 +9,16 @@ example_routing_distributed_level_2:
     # loads routes from the given routing file stored in some bundle
     resource: 'routing\public\' 
     type: directory
-###############################################################################################################    
+###############################################################################################################
+example_database_insert:
+    # loads routes from the given routing file stored in some bundle
+    path: /test_database
+    controller: App\Controller\TestDataBaseController::create
+example_database_fetching:
+    # loads routes from the given routing file stored in some bundle
+    path: /test_database_fetching/{id}
+    controller: App\Controller\TestDataBaseController::show
+example_database_update:
+    # loads routes from the given routing file stored in some bundle
+    path: /test_database_update/{id}
+    controller: App\Controller\TestDataBaseController::update    

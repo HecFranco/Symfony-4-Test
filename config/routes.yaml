@@ -12,7 +12,8 @@ frist_page_print_with_Twig:
     # ruta definida
     path: /test-frist-with-Twig
     controller: App\Controller\TestFristController::fristPageNumberUsingTwig
-# EXAMPLES ROUTING ###########################################################################    
+# EXAMPLES ROUTING ########################################################################### 
+# Importante en los archivos con extensión .yaml cada sangrado equivale a 4 espacios!!!   
 example_routing_with_variable:
     path: /example-with-variable/{slug}
     controller: App\Controller\TestRoutingController::showRoutingWithVariable
@@ -31,7 +32,6 @@ example_routing_advanced:
         _format: html|rss
         fecha: ([\d+]){8}
         pagina: \d+ 
-# Importante en los archivos con extensión .yaml cada sangrado equivale a 4 espacios!!!
 example_routing_distributed:
     # loads routes from the given routing file stored in some bundle
     resource: '..\src\Resources\config\routing.yaml' 
