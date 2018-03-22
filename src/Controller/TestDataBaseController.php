@@ -41,5 +41,19 @@ class TestDataBaseController extends Controller{
         $product->setName('New product name!');
         $em->flush();
         return $this->redirectToRoute('example_database_fetching',['id'=>$product->getId()]);
-    }   
+    }  
+    public function remove($id) {
+        $em = $this->getDoctrine()->getManager();
+        $product_repo = $em->getRepository(Product::class);
+        $product = $product_repo->find($id);        
+        $em->remove($product);
+        $em->flush();
+        return $this->redirectToRoute('example_database_fetching',['id'=>$product->getId()]);        
+    }
+    public function findAllOrderedByName() {
+        $em = $this->getDoctrine()->getManager();
+        $products = $em->getRepository(Product::class)
+         ->findAllOrderedByName();
+        var_dump($products);die();        
+    }        
 }

@@ -1,6 +1,8 @@
 # config/doctrine/Product.orm.yml
 App\Entity\Product:
     type: entity
+    repositoryClass: App\Repository\ProductRepository
+    table: product    
     id:
         id:
             type: integer

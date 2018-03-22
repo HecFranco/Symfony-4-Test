@@ -21,4 +21,10 @@ example_database_fetching:
 example_database_update:
     # loads routes from the given routing file stored in some bundle
     path: /test_database_update/{id}
-    controller: App\Controller\TestDataBaseController::update    
+    controller: App\Controller\TestDataBaseController::update
+example_database_remove:
+    path: /test_database_remove/{id}
+    controller: App\Controller\TestDataBaseController::remove
+example_database_repository:
+    path: /test_database_repository_findAllOrderedByName/
+    controller: App\Controller\TestDataBaseController::findAllOrderedByName        
